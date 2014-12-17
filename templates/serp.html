@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Flickr Live - {{ data.title or query }}
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <form action="{{ url_for('home') }}" method="GET">
+        <input name="q" type="text" value="{{ query }}" />
+        <button type="submit">Go</button>
+    </form>
+</div>
+<div class="row">
+{% for item in data['items'] %}
+    <div class="row">
+        <a href="{{ item.link }}" target="_blank">
+            <div class="row">
+                <img src="{{ item.media.m }}" alt="{{ item.title }}" />
+            </div>
+            <div class="row">
+                {{ item.title }}
+            </div>
+        </a>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
