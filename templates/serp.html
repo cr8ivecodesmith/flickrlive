@@ -13,7 +13,7 @@ Flickr Live - {{ data.title or query }}
 </div>
 <div class="row">
 {% for item in data['items'] %}
-    <div class="row">
+    <div class="result-item">
         <a href="{{ item.link }}" target="_blank">
             <div class="row">
                 <img src="{{ item.media.m }}" alt="{{ item.title }}" />

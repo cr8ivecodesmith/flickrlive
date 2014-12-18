@@ -14,9 +14,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
+    <!-- Extra Styles
+    ============================================= -->
+    {% block extra_css %}{% endblock %}
+
 </head>
-<body>
-    <div class="container">
+<body role="document">
+    <div class="container" role="main">
         {% block main %}{% endblock %}
     </div>
 
